@@ -43,32 +43,40 @@ const ProductCard = ({ product }) => {
 
   return (
     <Card
-      hoverable
-      // style={{ width: 240 }}
-      cover={<img
-        className='p-1' 
-        style={{ height: "150px", objectFit: "cover" }}
-        alt="example" 
-        src={ images && images.length
-              ? images[0].url
-              : ""
-            } 
-        />}
-        actions={[
-          <Link to={ "/product/"+_id }>
-            <EyeOutlined className='text-warning' />
-          </Link>
-          ,
 
-          <ShoppingCartOutlined 
-            onClick={ handleAddToCart }
-            className='text-danger' 
-          />
-        ]}
+      // hoverable
+      // style={{ width: 300 }}
+
+      cover={
+        <img
+          className='p-1' 
+          style={{ height: "300px", objectFit: "cover" }}
+          alt="example" 
+          src={ images && images.length
+               ? images[0].url
+               : ""
+              } 
+        />
+      }
+         
+      actions={[
+
+        <Link to={ "/product/"+_id }>
+          <EyeOutlined className='text-warning' />
+        </Link>
+        ,
+
+        <ShoppingCartOutlined 
+          onClick={ handleAddToCart }
+          className='text-danger' 
+        />
+      ]}
+      
     >
       <Meta title={ title } description={ description } />
     </Card>
   );
+
 }
 
 export default ProductCard;

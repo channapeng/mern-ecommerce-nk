@@ -112,7 +112,7 @@ const Shop = () => {
             <h4>ค้นหาราคาสินค้า</h4>
             <Slider 
               onChange={ handlePrice }
-              range max={ 100000} 
+              range max={ 10000000} 
               value={ price }
             />
             <hr />

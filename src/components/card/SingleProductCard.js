@@ -69,7 +69,7 @@ const SingleProductCard = ({ product }) => {
 
   return (
     <>
-      <div className="col-md-7">
+      <div className="col-md-6">
         <Carousel autoPlay showArrows={ true } infiniteLoop>
           { images && images.map(item=><img src={item.url} key={ item.public_id } />)}
         </Carousel>
@@ -78,9 +78,9 @@ const SingleProductCard = ({ product }) => {
           <TabPane tab="Description" key="1">
             { description }
           </TabPane>
-          <TabPane tab="more" key="2">
+          {/* <TabPane tab="more" key="2">
             More ...
-          </TabPane>
+          </TabPane> */}
         </Tabs>
 
       </div>
